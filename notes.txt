@@ -1,0 +1,1 @@
+curl -X POST http://localhost:5000/api/Patrol_Data -H 'Content-Type: application/json' -d '{"Time": datetime.datetime.now("<YYYY-mm-ddTHH:MM:ss>"),"RFID": RFID, "Area_ID": Area_ID,}'
