@@ -1,0 +1,208 @@
+2024-03-23 00:12:26,518 ERROR: Exception on /api/Patrol_Data [POST] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\sensor\arduino-data-logger\app\api\views.py", line 17, in add_sensor_reads
+    "Time": datetime.datetime.now("<YYYY-mm-ddTHH:MM:ss>"),
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+2024-03-23 00:13:11,771 ERROR: Exception on /api/Patrol_Data [GET] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\werkzeug\routing\map.py", line 650, in match
+    raise MethodNotAllowed(valid_methods=list(e.have_match_for)) from None
+werkzeug.exceptions.MethodNotAllowed: 405 Method Not Allowed: The method is not allowed for the requested URL.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "F:\sensor\arduino-data-logger\app\__init__.py", line 74, in method_not_allowed
+    return render_template('405.html'), 405
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 405.html
+2024-03-23 00:13:12,995 ERROR: Exception on /favicon.ico [GET] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "F:\sensor\arduino-data-logger\app\__init__.py", line 69, in page_not_found
+    return render_template('404.html'), 404
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
+2024-03-23 00:30:44,460 INFO: Patrol_Data : {'RFID': 'E328BF0D', 'Area_ID': 1} [in views.py: 14]
+2024-03-23 00:30:44,461 ERROR: Exception on /api/Patrol_Data [POST] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\sensor\arduino-data-logger\app\api\views.py", line 17, in add_sensor_reads
+    "Time": datetime.datetime.now("<YYYY-mm-ddTHH:MM:ss>"),
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+2024-03-23 00:44:33,527 INFO: Patrol_Data : {'RFID': 'E328BF0D', 'Area_ID': 1} [in views.py: 14]
+2024-03-23 00:44:33,527 ERROR: Exception on /api/Patrol_Data [POST] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1469, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "F:\sensor\arduino-data-logger\app\api\views.py", line 17, in add_sensor_reads
+TypeError: tzinfo argument must be None or of a tzinfo subclass, not type 'str'
+2024-03-23 00:45:37,673 ERROR: Exception on /api/Patrol_Data [GET] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\werkzeug\routing\map.py", line 650, in match
+    raise MethodNotAllowed(valid_methods=list(e.have_match_for)) from None
+werkzeug.exceptions.MethodNotAllowed: 405 Method Not Allowed: The method is not allowed for the requested URL.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "F:\sensor\arduino-data-logger\app\__init__.py", line 74, in method_not_allowed
+    return render_template('405.html'), 405
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 405.html
+2024-03-23 00:45:38,794 ERROR: Exception on /favicon.ico [GET] [in app.py: 1414]
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1484, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1458, in dispatch_request
+    self.raise_routing_exception(req)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1440, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\ctx.py", line 353, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\werkzeug\routing\map.py", line 655, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 2190, in wsgi_app
+    response = self.full_dispatch_request()
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1486, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1341, in handle_user_exception
+    return self.handle_http_exception(e)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\app.py", line 1281, in handle_http_exception
+    return self.ensure_sync(handler)(e)
+  File "F:\sensor\arduino-data-logger\app\__init__.py", line 69, in page_not_found
+    return render_template('404.html'), 404
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 150, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1081, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 1010, in get_template
+    return self._load_template(name, globals)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\environment.py", line 969, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\jinja2\loaders.py", line 126, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 64, in get_source
+    return self._get_source_fast(environment, template)
+  File "F:\sensor\arduino-data-logger\.venv\lib\site-packages\flask\templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: 404.html
